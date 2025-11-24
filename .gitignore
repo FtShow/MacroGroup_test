@@ -1,0 +1,8 @@
+# Python
+bmemct/__pycache__/
+bmemct/db.sqlite3
+bmemct/venv/
+
+
+fmemct/node_modules/
+fmemct/dist/
