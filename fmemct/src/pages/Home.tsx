@@ -1,4 +1,4 @@
-import {Button, Typography} from "@mui/material";
+import {Button, Stack, Typography} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
 
@@ -7,12 +7,16 @@ export const Home = () => {
     const handleGoToWorkplaceForm = () => {
         navigate('/workplace_form')
     }
+    const handleGoToWorkplaceList = () => {
+        navigate('/workplace_list')
+    }
     return (
-        <>
-            <Typography variant={'h5'}>
-                Кнопка просто для того, что бы показать что подключен роутер дом
-            </Typography>
-            <Button variant={'contained'} onClick={handleGoToWorkplaceForm}> Перейти к форме</Button>
-        </>
+        <Stack direction="column" spacing={5}>
+            <Typography>Разные страницы просто что бы показать что подключен react-router</Typography>
+            <Stack direction="row" justifyContent="space-between">
+                <Button variant={'contained'} onClick={handleGoToWorkplaceForm}> Перейти к форме</Button>
+                <Button variant={'contained'} onClick={handleGoToWorkplaceList}> Перейти к таблице</Button>
+            </Stack>
+        </Stack>
     );
 };
