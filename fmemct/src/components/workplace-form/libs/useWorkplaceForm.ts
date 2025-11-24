@@ -22,7 +22,9 @@ export const useWorkplaceForm = () => {
         ipAddress: "",
         isComputerPlace: false,
     });
-    const [createWorkplace, { loading, error }] = useMutation(CREATE_WORKPLACE);
+    const [createWorkplace, { loading, error }] = useMutation(CREATE_WORKPLACE, {
+        refetchQueries: ["GetWorkplaces"],
+    });
 
     const handleChange =
         (field: string) => (event: ChangeEvent<HTMLInputElement>) => {
