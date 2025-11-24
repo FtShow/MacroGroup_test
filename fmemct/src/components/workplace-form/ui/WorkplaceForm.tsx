@@ -5,13 +5,13 @@ import {
     Stack,
     Switch,
     TextField,
-    Typography
+    Typography,
+    Alert
 } from "@mui/material";
 import {useWorkplaceForm} from "../libs/useWorkplaceForm.ts";
 
-
 export const WorkplaceForm = () => {
-    const {form, handleSwitchChange, handleSubmit, handleChange} = useWorkplaceForm()
+    const {form, handleSwitchChange, handleSubmit, handleChange, loading, error} = useWorkplaceForm();
 
     return (
         <>
@@ -54,8 +54,14 @@ export const WorkplaceForm = () => {
                         />
                     )}
 
-                    <Button variant="contained" type="submit">
-                        Создать
+                    {error && (
+                        <Alert severity="error">
+                            {error.message || "Ошибка при отправке данных"}
+                        </Alert>
+                    )}
+
+                    <Button variant="contained" type="submit" disabled={loading}>
+                        {loading ? "Отправка..." : "Создать"}
                     </Button>
                 </Stack>
             </Box>
