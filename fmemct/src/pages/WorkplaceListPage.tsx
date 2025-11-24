@@ -1,6 +1,7 @@
 
-import {BackButton} from "../components/button-navigate-back/ButtonNavigateBack.tsx";
+
 import {WorkplaceList} from "../components/workplace-list";
+import {BackButton} from "../components/button-navigate-back";
 
 
 const WorkplaceListPage = () => {

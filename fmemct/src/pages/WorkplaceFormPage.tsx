@@ -1,5 +1,5 @@
 import {WorkplaceForm} from "../components/workplace-form";
-import {BackButton} from "../components/button-navigate-back/ButtonNavigateBack.tsx";
+import {BackButton} from "../components/button-navigate-back";
 
 
 const WorkplaceFormPage = () => {
