@@ -8,7 +8,7 @@ Backend на Django + Graphene (GraphQL), Frontend на React + TypeScript + MUI
 1. Перейти в папку backend:
 
 ```bash
-cd backend
+cd bmemct
 ```
 
 2. Создать виртуальное окружение и активировать:
@@ -43,7 +43,7 @@ GraphQL доступен по адресу: `http://127.0.0.1:8000/graphql/`
 1. Перейти в папку frontend:
 
 ```bash
-cd frontend
+cd fmemct
 ```
 
 2. Установить зависимости:
