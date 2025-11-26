@@ -2,7 +2,7 @@ import {gql} from "@apollo/client";
 import {useQuery} from "@apollo/client/react";
 import type {GetWorkplacesData} from "../../../types/types.ts";
 
-const GET_WORKPLACES = gql`
+export const GET_WORKPLACES = gql`
   query GetWorkplaces {
     workplaces {
       id

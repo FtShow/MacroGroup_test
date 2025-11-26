@@ -1,6 +1,7 @@
 import {type ChangeEvent, type FormEvent, useState} from "react";
 import {gql} from "@apollo/client";
 import {useMutation} from "@apollo/client/react";
+import {GET_WORKPLACES} from "../../workplace-list/libs/useGetWorkplaceList.ts";
 
 const CREATE_WORKPLACE = gql`
   mutation CreateWorkplace($name: String!, $description: String, $ipAddress: String) {
@@ -23,7 +24,7 @@ export const useWorkplaceForm = () => {
         isComputerPlace: false,
     });
     const [createWorkplace, { loading, error }] = useMutation(CREATE_WORKPLACE, {
-        refetchQueries: ["GetWorkplaces"],
+        refetchQueries: [{ query: GET_WORKPLACES }],
     });
 
     const handleChange =
